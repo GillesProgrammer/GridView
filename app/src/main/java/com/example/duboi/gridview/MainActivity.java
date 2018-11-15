@@ -10,13 +10,14 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     GridView grid;
+    List<Integer> imagesId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         grid = findViewById(R.id.grid);
-        List<Integer>imagesId = new ArrayList<>();
+        imagesId = new ArrayList<>();
         imagesId.add(R.drawable.tvshow1);
         imagesId.add(R.drawable.tvshow2);
         imagesId.add(R.drawable.tvshow3);

@@ -1,6 +1,8 @@
 package com.example.duboi.gridview;
 
 import android.content.Context;
+import android.nfc.Tag;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -23,7 +25,7 @@ public class ImageAdapterGrid extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return position;
+        return imagesId.get(position);
     }
 
     @Override
@@ -33,6 +35,7 @@ public class ImageAdapterGrid extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        Log.i("test","get View: "+ position);
         ImageView imageView = null;
         if(convertView == null) {
             imageView = new ImageView(context);
